@@ -21,14 +21,14 @@ public class ReadInput {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Input expression (for eg: 4*3/2)");
+        System.out.println("Enter a mathematical expression(like: 2*6/3-4+2)");
 
         String inputLine = scanner.nextLine();
 
         ReadInput readInput = new ReadInput();
 
         if(!readInput.validateInput(inputLine)) {
-            System.out.println("Mathematical expression validation failed");
+            System.out.println("Invalid Expression");
             System.exit(0);
         }
 

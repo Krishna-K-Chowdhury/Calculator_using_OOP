@@ -25,13 +25,13 @@ public class MainApp {
         numbers = new LinkedList<String>(Arrays.asList(numbersArr));
         operations = new LinkedList<String>(Arrays.asList(operArr));
 
-        Double res = Double.parseDouble(numbers.poll());
+        Double storeRes = Double.parseDouble(numbers.poll());
 
         while(!numbers.isEmpty()) {
-            String opr = operations.poll();
+            String op = operations.poll();
 
             Operate operate;
-            switch (opr) {
+            switch (op) {
                 case "+":
                     operate = new Add();
                     break;
@@ -50,10 +50,10 @@ public class MainApp {
 
             Double num = Double.parseDouble(numbers.poll());
 
-            res = operate.getResult(res, num);
+            storeRes = operate.getResult(storeRes, num);
         }
 
-        System.out.println(res);
+        System.out.println(storeRes);
     }
 
 }
